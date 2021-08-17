@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+
+    --clr-primary: hsl(172, 67%, 45%);
+    --clr-neutral-900: hsl(183, 100%, 15%);
+    --clr-neutral-700: hsl(186, 14%, 43%);
+    --clr-neutral-600: hsl(184, 14%, 56%);
+    --clr-neutral-400: hsl(185, 41%, 84%);
+    --clr-neutral-300: hsl(189, 41%, 97%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+}
+
+input {
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    background-color: var(--clr-neutral-400);
+}
+
+header {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    background-color: var(--clr-neutral-100);
+    padding: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+form > * + * {
+    margin-top: 1rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--clr-neutral-700);
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.control-wrapper {
+    position: relative;
+}
+
+.control-wrapper img {
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    z-index: 300;
+    height: 1rem;
+}
+
+.control-wrapper input {
+    position: relative;
+    width: 100%
+}
+
+input[type=number] {
+    background-color: var(--clr-neutral-300);
+    border-radius: 0.25rem;
+    border: none;
+    font-weight: 700;
+    padding: 0.26em 0.7em;
+    color: var(--clr-neutral-900);
+    font-size: 1rem;
+    text-align: right;
+}
+
+input[type=number]:focus-within {
+    outline-color: var(--clr-primary);
+}
+
+.radio-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.radio-wrapper > * {
+    width: 50%;
+}
+
+.radio-wrapper > *:nth-child(odd) {
+    padding: 0.25em 0.4em 0.25em 0;
+}
+
+.radio-wrapper > *:nth-child(even) {
+    padding: 0.25em 0 0.25em 0.4em;
+}
+
+.custom-container input {
+    width: 100%;
+}
+
+fieldset label {
+    display: block;
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-300);
+    border-radius: 6px;
+    text-align: center;
+    padding: 0.4rem 2rem;
+    font-size: 1rem;
+}
+
+input[type=radio]:checked ~ label {
+    background-color: var(--clr-primary);
+}
+
+input[type=radio] {
+    /*display: none;*/
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--clr-neutral-700);
+}
+
+button[type=submit] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.tip-result {
+    background-color: var(--clr-neutral-900);
+    border-radius: 1em;
+    margin-top: 1rem;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.tip-result button {
+    background-color: var(--clr-primary);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-neutral-900);
+    padding: 0.4em 0;
+    margin: 1.5em 1em;
+}
+
+.receipt-container {
+    margin: 1.5em 1em 0;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.receipt-item + .receipt-item {
+    margin-top: 1rem;
+}
+.main-label {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--clr-neutral-300);
+}
+
+.per-person {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: var(--clr-neutral-700);
+}
+
+.item-amount {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+}

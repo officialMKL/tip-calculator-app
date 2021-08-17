@@ -5,40 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <img src="./images/logo.svg" alt="Logo of the tip calculator">
+  </header>
 
-  Bill
+  <main>
+    <section class="card">
+      <form>
+        <div class="form-control">
+          <label for="bill">Bill</label>
+          <div class="control-wrapper">
+            <img src="./images/icon-dollar.svg" alt="Dollar Icon">
+            <input type="number" name="bill" id="bill" placeholder="0" min="1" step=".01" required>
+          </div>
+        </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <fieldset>
+          <legend>Select Tip %</legend>
+          <div class="radio-wrapper">
+            <div class="radio-container">
+              <input type="radio" name="tip" id="fivePercent" value="5">
+              <label for="fivePercent">5%</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" name="tip" id="tenPercent" value="10">
+              <label for="tenPercent">10%</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" name="tip" id="fifteenPercent" value="15">
+              <label for="fifteenPercent">15%</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" name="tip" id="twentyFivePercent" value="25">
+              <label for="twentyFivePercent">25%</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" name="tip" id="fiftyPercent" value="50">
+              <label for="fiftyPercent">50%</label>
+            </div>
+            <div class="custom-container">
+              <input type="number" name="custom-tip" aria-label="Custom tip" placeholder="Custom">
+            </div>
+          </div>
+        </fieldset>
 
-  Number of People
 
-  Tip Amount
-  / person
+        <div class="form-control">
+          <label for="personCount">Number of People</label>
+          <div class="control-wrapper">
+            <img src="./images/icon-person.svg" alt="Person Icon">
+            <input type="number" name="personCount" id="personCount" placeholder="0" required min="1">
+          </div>
+        </div>
 
-  Total
-  / person
+        <button type="submit">Test</button>
+      </form>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="tip-result">
+        <div class="receipt-container">
+          <div class="receipt-item">
+            <div class="item-label">
+              <span class="main-label">Tip Amount</span>
+              <span class="per-person">/ person</span>
+            </div>
+            <div class="item-amount" id="tipPerson">$0.00</div>
+          </div>
+          <div class="receipt-item">
+            <div class="item-label">
+              <span class="main-label">Total</span>
+              <span class="per-person">/ person</span>
+            </div>
+            <div class="item-amount" id="totalPerson">$0.00</div>
+          </div>
+        </div>
+
+        <button>Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+<!--  Bill-->
+
+<!--  Select Tip %-->
+<!--  5%-->
+<!--  10%-->
+<!--  15%-->
+<!--  25%-->
+<!--  50%-->
+<!--  Custom-->
+
+<!--  Number of People-->
+
+<!--  Tip Amount-->
+<!--  / person-->
+
+<!--  Total-->
+<!--  / person-->
+
+<!--  Reset-->
+<!--  -->
+<!--  <div class="attribution">-->
+<!--    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. -->
+<!--    Coded by <a href="#">Your Name Here</a>.-->
+<!--  </div>-->
 </body>
 </html>
